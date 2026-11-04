@@ -14,6 +14,11 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
+"@isaacs/nonrecursive-glob-match@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@isaacs/nonrecursive-glob-match/-/nonrecursive-glob-match-1.0.3.tgz#7f6724fd8a6ca315d6bb7f63f0e4d079060da246"
+  integrity sha512-SI7kyKHq4XXDRozw+r9GlRZkia1ZkFrpLW98r2IC2Bpr8YkFGE3fvjzmxCG0x78A++69HmDNrDvSMYBZmHGpKA==
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
@@ -235,7 +240,7 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-brace-expansion@^5.0.8:
+brace-expansion@^5.0.12:
   version "5.0.12"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-5.0.12.tgz#995fbb4750a77c4d16a7dc942ff2ca6ef8e675ec"
   integrity sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ==
@@ -532,14 +537,14 @@ express-handlebars@*:
     graceful-fs "^4.2.9"
     handlebars "^4.7.7"
 
-express-handlebars@^8.0.4:
-  version "8.0.7"
-  resolved "https://registry.yarnpkg.com/express-handlebars/-/express-handlebars-8.0.7.tgz#bd6309bdef61e5c8d5647411479c5cb6b210518c"
-  integrity sha512-b7aiFGIuTiGM99pXc9cr+CZKvm+kZgYwdsihgEGdD703xG5NZvMUL1U6UOlEv0kLNM2uA+rVecYGxkSWnYu7LQ==
+express-handlebars@^9.0.3:
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/express-handlebars/-/express-handlebars-9.0.4.tgz#5e13ff71d01cd800f77691c66dbb3eb9dc1621cd"
+  integrity sha512-nwrDVURdu+6IRy7HYqPCQbVwBlu05sBG6WXNlxWRt5MdDU9ToWe2ruphDX4oIQ4dy/ylFR8m74CPQVG9YeALvQ==
   dependencies:
-    glob "^13.0.6"
+    glob "^14.0.3"
     graceful-fs "^4.2.11"
-    handlebars "^4.7.9"
+    handlebars "^4.7.10"
 
 express@^4.22.2:
   version "4.22.3"
@@ -660,14 +665,14 @@ glob-parent@~5.1.2:
   dependencies:
     is-glob "^4.0.1"
 
-glob@^13.0.6:
-  version "13.0.6"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-13.0.6.tgz#078666566a425147ccacfbd2e332deb66a2be71d"
-  integrity sha512-Wjlyrolmm8uDpm/ogGyXZXb1Z+Ca2B8NbJwqBVg0axK9GbBeoS7yGV6vjXnYdGm6X53iehEuxxbyiKp8QmN4Vw==
+glob@^14.0.3:
+  version "14.0.3"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-14.0.3.tgz#71e124649b3e28fdb09bdb07ef478b10c68fd6e1"
+  integrity sha512-A1vjIwC3qpdCso45Iw127gnp7sPhqgY8lUQhDrArIs+GbmfaaVPFuoyy7WyLT9EPZCRZ7j7aLdwUhQmHWesEow==
   dependencies:
-    minimatch "^10.2.2"
+    minimatch "^11.0.2"
     minipass "^7.1.3"
-    path-scurry "^2.0.2"
+    path-scurry "^3.0.0"
 
 glob@^7.2.0:
   version "7.2.0"
@@ -720,6 +725,18 @@ graceful-fs@^4.2.11:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
+handlebars@^4.7.10:
+  version "4.7.10"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.10.tgz#12419ea1b41391b3ffcf003f2164dcbce090c417"
+  integrity sha512-P5VJMVM7qgBn6vjXMw8WG9uVI+ncf2pi72j4de4yz5ZULLj2RGqLYaKOYGsgyrViQ0tePOVlN1tDCCXXtFqXKg==
+  dependencies:
+    minimist "^1.2.8"
+    neo-async "^2.6.2"
+    source-map "^0.6.1"
+    wordwrap "^1.0.0"
+  optionalDependencies:
+    uglify-js "^3.1.4"
+
 handlebars@^4.7.7:
   version "4.7.7"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
@@ -727,18 +744,6 @@ handlebars@^4.7.7:
   dependencies:
     minimist "^1.2.5"
     neo-async "^2.6.0"
-    source-map "^0.6.1"
-    wordwrap "^1.0.0"
-  optionalDependencies:
-    uglify-js "^3.1.4"
-
-handlebars@^4.7.9:
-  version "4.7.10"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.10.tgz#12419ea1b41391b3ffcf003f2164dcbce090c417"
-  integrity sha512-P5VJMVM7qgBn6vjXMw8WG9uVI+ncf2pi72j4de4yz5ZULLj2RGqLYaKOYGsgyrViQ0tePOVlN1tDCCXXtFqXKg==
-  dependencies:
-    minimist "^1.2.8"
-    neo-async "^2.6.2"
     source-map "^0.6.1"
     wordwrap "^1.0.0"
   optionalDependencies:
@@ -1001,12 +1006,13 @@ mimic-response@^1.0.0, mimic-response@^1.0.1:
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
   integrity sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==
 
-minimatch@^10.2.2:
-  version "10.2.6"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.2.6.tgz#fd956bbe0b77241e9f15ac5dccb1c638060968ef"
-  integrity sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==
+minimatch@^11.0.2:
+  version "11.0.4"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-11.0.4.tgz#3ed156790c2754647ee94dab305a3f93cd16481e"
+  integrity sha512-/UJ1dEoVQTjPNDh6SGlUo+ueLMmoHTas4q+8yaAR/5t6nLAIiBDJtoYUh20IYleix7ehiQkgczb84PE3uzHkxg==
   dependencies:
-    brace-expansion "^5.0.8"
+    "@isaacs/nonrecursive-glob-match" "^1.0.3"
+    brace-expansion "^5.0.12"
 
 minimatch@^3.0.4:
   version "3.1.2"
@@ -1147,10 +1153,10 @@ path-is-absolute@^1.0.0:
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
   integrity sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
 
-path-scurry@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/path-scurry/-/path-scurry-2.0.2.tgz#6be0d0ee02a10d9e0de7a98bae65e182c9061f85"
-  integrity sha512-3O/iVVsJAPsOnpwWIeD+d6z/7PmqApyQePUtCndjatj/9I5LylHvt5qluFaBT3I5h3r1ejfR056c+FCv+NnNXg==
+path-scurry@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/path-scurry/-/path-scurry-3.0.0.tgz#384894267bb8d1889242d176433f91ae1eec5cbb"
+  integrity sha512-1pTbQqH1wIwMi/eleQ5leFTTCkzFsPcgXNjwOA8YGGW/W4/kHT3dssE7Z6NH+zuqNLOzOB0uaD61yl7cAcVhgg==
   dependencies:
     lru-cache "^11.0.0"
     minipass "^7.1.2"
